@@ -9,9 +9,15 @@ function PokemonCard({ name, image, number, id ,mapIndex,classification,weight,h
   const pokemonState = useSelector((state) => state.pokemons);
   const dispatch = useDispatch();
 
+
+  const handleClick = () =>{
+    dispatch(setPokemon({ name, image, number, id,classification,weight,height }))
+    window.scrollTo(0,0)
+  }
+
   return (
     <motion.div
-      onClick={() => dispatch(setPokemon({ name, image, number, id,classification,weight,height }))}
+      onClick={handleClick}
       className="bg-[#3F414B] flex my-2 items-center cursor-pointer hover:bg-[#545663] transition-all ease-in-out"
       key={id}
       variants={{
