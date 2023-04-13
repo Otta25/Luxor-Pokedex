@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 
 function Login() {
+  document.title ='Login | Pokedex'
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

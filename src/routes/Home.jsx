@@ -34,13 +34,18 @@ function Home() {
   const [pokemonPerPage, setPokemonPerPage] = useState(7);
   const dataLength = data && data.pokemons.length;
   const pokemonsData = useSelector((state) => state);
-  
 
   if (data) {
-    if(pokemonsData.pokemons){document.title = `${pokemonsData.pokemons.name} | Pokedex `;} else{{document.title = `Home | Pokedex `;}} 
+    if (pokemonsData.pokemons) {
+      document.title = `${pokemonsData.pokemons.name} | Pokedex `;
+    } else {
+      {
+        document.title = `Home | Pokedex `;
+      }
+    }
     return (
       <div className=" bg-[#484D57] min-h-[100vh] flex items-center justify-center">
-        <div className="flex flex-col-reverse w-full desktop:flex-row  desktop:w-[70vw] m-auto my-10">
+        <div className="flex flex-col-reverse w-full desktop:flex-row  desktop:w-[1200px]  m-auto my-10">
           <div className="desktop:w-[40%]">
             <div className=" bg-[#2D2F36] p-10">
               {data &&
