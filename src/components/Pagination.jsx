@@ -35,13 +35,13 @@ function Pagination({ page, setPage, dataLength, pokemonPerPage, data }) {
       </div>
       <div className="flex gap-2">
         <button
-          className="py-1 px-3 bg-[#2D2F36] text-[white] rounded-lg hover:bg-[#575b68] transition-all ease-in-out active:scale-110"
+          className="py-1 px-3 bg-[#2D2F36] font-medium text-[white] rounded-lg hover:bg-[#575b68] transition-all ease-in-out active:scale-110"
           onClick={prevPage}
         >
           Prev
         </button>
         <button
-          className="py-1 px-3 bg-[#2D2F36] text-[white] rounded-lg hover:bg-[#575b68] transition-all ease-in-out active:scale-110"
+          className="py-1 px-3 bg-[#2D2F36] font-medium text-[white] rounded-lg hover:bg-[#575b68] transition-all ease-in-out active:scale-110"
           onClick={nextPage}
         >
           Next

@@ -39,19 +39,19 @@ function PokemonDetails() {
             alt=""
           />
           <span className=" font-bold text-xl text-[#F2C94C]">
-            {pokemon && pokemon.classification}
+           Type: {pokemon && pokemon.classification}
           </span>
           <span className=" text-[white]">
-            {pokemon && pokemon.weight.minimum}
+           Minimum weight: {pokemon && pokemon.weight.minimum}
           </span>
           <span className=" text-[white]">
-            {pokemon && pokemon.weight.maximum}
+           Maximum weight: {pokemon && pokemon.weight.maximum}
           </span>
           <span className=" text-[white]">
-            {pokemon && pokemon.height.minimum}
+           Minimum weight: {pokemon && pokemon.height.minimum}
           </span>
           <span className=" text-[white]">
-            {pokemon && pokemon.height.maximum}
+           Minimum weight: {pokemon && pokemon.height.maximum}
           </span>
         </div>
       )}
