@@ -65,6 +65,7 @@ function Home() {
                       image={pokemon.image}
                       id={pokemon.id}
                       number={pokemon.number}
+                      data={data}
                     />
                   ))}
             </div>
@@ -73,6 +74,7 @@ function Home() {
               setPage={setPage}
               pokemonPerPage={pokemonPerPage}
               dataLength={dataLength}
+              data={data}
             />
           </div>
           <div className="bg-[#3B3E46] w-full ">

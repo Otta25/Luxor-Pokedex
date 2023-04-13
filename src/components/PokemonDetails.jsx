@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { animate, motion, useAnimation } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import pikachuImg from "../assets/img/pikachu.svg";
+
 
 function PokemonDetails() {
   const pokemon = useSelector((state) => state.pokemons);
