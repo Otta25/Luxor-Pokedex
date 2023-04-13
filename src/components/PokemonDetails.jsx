@@ -31,9 +31,9 @@ function PokemonDetails() {
         </div>
       )}
       {pokemon && (
-        <div className=" desktop:bg-[#00000065] desktop:w-[40%] m-auto py-5 flex flex-col items-center justify-center rounded-lg shadow-2xl">
+        <div className=" desktop:bg-[#00000065] desktop:w-[40%] m-auto py-5 flex flex-col items-center justify-center rounded-lg ">
           <img
-            className="w-[360px] h-[330px] object-cover object-top"
+            className="w-[360px] h-[330px] object-cover object-top p-3"
             src={pokemon && pokemon.image}
             alt=""
           />

@@ -4,11 +4,6 @@
   animation: pokeball-spinner 1.5s infinite ease-in-out;
 }
 
-.App {
-  font-family: 'Open Sans';
-}
-
-
 
 
 @keyframes pokeball-spinner {

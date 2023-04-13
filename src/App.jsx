@@ -7,13 +7,11 @@ import NotFound from "./routes/NotFound";
 
 function App() {
   return (
-    <div className="App">
      <Routes>
         <Route path="/" element={<Login/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="*" element={<NotFound/>} />
      </Routes>
-    </div>
   );
 }
 

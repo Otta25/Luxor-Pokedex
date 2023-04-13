@@ -37,8 +37,8 @@ function Home() {
 
   if (data) {
     return (
-      <div className=" bg-[#484D57] w-full desktop:h-[100vh] flex items-center justify-center">
-        <div className="flex desktop:flex-row flex-col-reverse w-full desktop:w-[70vw] m-auto">
+      <div className=" bg-[#484D57] min-h-[100vh] flex items-center justify-center">
+        <div className="flex flex-col-reverse w-full desktop:flex-row  desktop:w-[70vw] m-auto my-10">
           <div className="desktop:w-[40%]">
             <div
               className=" bg-[#2D2F36] p-10"
