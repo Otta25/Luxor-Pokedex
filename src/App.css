@@ -1,0 +1,21 @@
+
+.pokeball {
+  width: 7rem;
+  animation: pokeball-spinner 1.5s infinite ease-in-out;
+}
+
+.App {
+  font-family: 'Open Sans';
+}
+
+
+
+
+@keyframes pokeball-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
