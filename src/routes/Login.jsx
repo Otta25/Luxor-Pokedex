@@ -26,19 +26,19 @@ function Login() {
         }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 100 }}
-        className=" desktop:w-[508px] desktop:h-[459px] bg-[#2D2F36] flex flex-col items-center justify-center py-[4rem] px-[2rem] gap-5 rounded-md"
+        className="w-[508px] bg-[#2D2F36] flex flex-col items-center justify-center py-[4rem] px-[2rem] gap-5 rounded-md"
         action=""
       >
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-[380px] p-3 bg-[#3F414B] text-[white] text-lg rounded-md focus:outline-none focus:border focus:border-[#F2C94C]"
+          className="w-[90%] p-3 bg-[#3F414B] text-[white] text-lg rounded-md focus:outline-none focus:border focus:border-[#F2C94C]"
           type="text"
         />
         <input
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-[380px] p-3 bg-[#3F414B] text-[white] text-lg rounded-md focus:outline-none focus:border focus:border-[#F2C94C]"
+          className="w-[90%] p-3 bg-[#3F414B] text-[white] text-lg rounded-md focus:outline-none focus:border focus:border-[#F2C94C]"
           type="password"
         />
         {wrongMessage && (
@@ -54,7 +54,7 @@ function Login() {
           </motion.h2>
         )}
         <button
-          className="w-[380px] p-3 mt-3 bg-[#F2C94C] text-[white] rounded-md  font-semibold text-lg"
+          className="w-[90%] p-3 mt-3 bg-[#F2C94C] text-[white] rounded-md  font-semibold text-lg"
           type="submit"
         >
           LOGIN
