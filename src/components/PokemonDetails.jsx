@@ -1,10 +1,12 @@
-import { animate, motion, useAnimation } from "framer-motion";
+import { animate, motion, useAnimate, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import pikachuImg from "../assets/img/pikachu.svg";
 
+
 function PokemonDetails({ childs }) {
   const pokemon = useSelector((state) => state.pokemons);
+
 
   return (
     <div className="w-full h-full flex flex-col">
