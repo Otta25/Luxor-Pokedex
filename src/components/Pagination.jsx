@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 
-function Pagination({ page, setPage, dataLength, pokemonPerPage, data }) {
+function Pagination({
+  page,
+  setPage,
+  dataLength,
+  pokemonPerPage,
+  data,
+  dataIsOver,
+}) {
   const [thisPage, setThisPage] = useState(1);
   let pageNumbers = [];
 
@@ -11,9 +18,7 @@ function Pagination({ page, setPage, dataLength, pokemonPerPage, data }) {
   };
 
   const nextPage = () => {
-    if (page >= 1 && page < dataLength / pokemonPerPage) {
-      setPage(page + 1);
-    }
+    setPage(page + 1);
   };
 
   for (let i = 0; i <= dataLength / pokemonPerPage; i++) {
@@ -40,12 +45,16 @@ function Pagination({ page, setPage, dataLength, pokemonPerPage, data }) {
         >
           Prev
         </button>
-        <button
-          className="py-1 px-3 bg-[#2D2F36] font-medium text-[white] rounded-lg hover:bg-[#575b68] transition-all ease-in-out active:scale-110"
-          onClick={nextPage}
-        >
-          Next
-        </button>
+        {dataIsOver ? (
+          <></>
+        ) : (
+          <button
+            className="py-1 px-3 bg-[#2D2F36] font-medium text-[white] rounded-lg hover:bg-[#575b68] transition-all ease-in-out active:scale-110"
+            onClick={nextPage}
+          >
+            Next
+          </button>
+        )}
       </div>
     </div>
   );

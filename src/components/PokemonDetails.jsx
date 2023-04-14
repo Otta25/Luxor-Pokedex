@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import pikachuImg from "../assets/img/pikachu.svg";
 
 
-function PokemonDetails() {
+function PokemonDetails({childs}) {
   const pokemon = useSelector((state) => state.pokemons);
 
   return (
