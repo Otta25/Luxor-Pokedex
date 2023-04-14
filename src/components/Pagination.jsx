@@ -39,6 +39,12 @@ function Pagination({
         ))}
       </div>
       <div className="flex gap-2">
+      {page>4 ?
+        <button className="text-[white] px-3 rounded-lg font-medium bg-[#2D2F36] hover:bg-[#575b68] transition-all ease-in-out active:scale-110">
+          {page}
+        </button>:
+        <></>
+         }
         <button
           className="py-1 px-3 bg-[#2D2F36] font-medium text-[white] rounded-lg hover:bg-[#575b68] transition-all ease-in-out active:scale-110"
           onClick={prevPage}
