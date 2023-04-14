@@ -7,26 +7,7 @@ import Spinner from "../components/Spinner";
 import PokemonCard from "../components/PokemonCard";
 import Pagination from "../components/Pagination";
 import PokemonDetails from "../components/PokemonDetails";
-
-const GET_POKEMONS = gql`
-  {
-    pokemons(first: 35) {
-      id
-      number
-      name
-      image
-      classification
-      weight {
-        minimum
-        maximum
-      }
-      height {
-        minimum
-        maximum
-      }
-    }
-  }
-`;
+import GET_POKEMONS from '../graphql/queries'
 
 function Home() {
   const { loading, error, data } = useQuery(GET_POKEMONS);

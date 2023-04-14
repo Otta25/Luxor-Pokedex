@@ -33,14 +33,16 @@ function Login() {
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-[90%] p-3 bg-[#3F414B] text-[white] text-lg rounded-md focus:outline-none focus:border focus:border-[#F2C94C]"
+          className="w-[90%] p-3 bg-[#3F414B] text-[white] text-lg rounded-md focus:outline-none focus:border focus:border-[#F2C94C] placeholder:opacity-30"
           type="text"
+          placeholder="admin"
         />
         <input
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-[90%] p-3 bg-[#3F414B] text-[white] text-lg rounded-md focus:outline-none focus:border focus:border-[#F2C94C]"
+          className="w-[90%] p-3 bg-[#3F414B] text-[white] text-lg rounded-md focus:outline-none focus:border focus:border-[#F2C94C] placeholder:opacity-30"
           type="password"
+          placeholder="admin"
         />
         {wrongMessage && (
           <motion.h2 
