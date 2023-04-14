@@ -1,5 +1,4 @@
-import { animate, motion, useAnimate, useAnimation } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import pikachuImg from "../assets/img/pikachu.svg";
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Pagination({
   page,
@@ -8,7 +8,7 @@ function Pagination({
   data,
   dataIsOver,
 }) {
-  const [thisPage, setThisPage] = useState(1);
+
   let pageNumbers = [];
 
   const prevPage = () => {

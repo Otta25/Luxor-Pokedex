@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect} from "react";
 import { useQuery, gql } from "@apollo/client";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { motion } from "framer-motion";
 import Spinner from "../components/Spinner";
 import PokemonCard from "../components/PokemonCard";
 import Pagination from "../components/Pagination";
@@ -29,12 +28,12 @@ function Home() {
     }
   }
 `;
-  const { loading, error, data, previousData } = useQuery(GET_POKEMONS);
+  const { data, previousData } = useQuery(GET_POKEMONS);
   const [pokemonPerPage, setPokemonPerPage] = useState(7);
   const dataLength = data && data.pokemons.length;
   const pokemonsData = useSelector((state) => state);
   const [dataIsOver, setDataIsOver] = useState(false);
-  const query = useQuery(GET_POKEMONS);
+ 
 
   useEffect(() => {
     if (previousData) {
@@ -52,9 +51,7 @@ function Home() {
     if (pokemonsData.pokemons) {
       document.title = `${pokemonsData.pokemons.name} | Pokedex `;
     } else {
-      {
         document.title = `Home | Pokedex `;
-      }
     }
 
     return (

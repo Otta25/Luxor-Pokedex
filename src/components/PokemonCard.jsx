@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import { setPokemon } from "../redux/pokemonReducer";
 import { motion } from "framer-motion";
 
 
 function PokemonCard({ name, image, number, id ,mapIndex,classification,weight,height}) {
-  const [selectedPokemon, setSelectedPokemon] = useState(null);
-  const pokemonState = useSelector((state) => state.pokemons);
   const dispatch = useDispatch();
-
 
   const handleClick = () =>{
     dispatch(setPokemon({ name, image, number, id,classification,weight,height }))
