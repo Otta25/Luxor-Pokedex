@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import pikachuImg from "../assets/img/pikachu.svg";
 
-
-function PokemonDetails({childs}) {
+function PokemonDetails({ childs }) {
   const pokemon = useSelector((state) => state.pokemons);
 
   return (
@@ -32,26 +31,26 @@ function PokemonDetails({childs}) {
         </div>
       )}
       {pokemon && (
-        <div className=" desktop:bg-[#00000065] desktop:w-[40%] m-auto py-5 flex flex-col items-center justify-center rounded-lg ">
+        <div className="pokemoncard desktop:bg-[#00000065] desktop:w-[40%] m-auto py-5 flex flex-col items-center justify-center rounded-lg ">
           <img
             className="w-[360px] h-[330px] object-cover object-top p-3"
             src={pokemon && pokemon.image}
             alt=""
           />
           <span className=" font-bold text-xl text-[#F2C94C]">
-           Type: {pokemon && pokemon.classification}
+            Type: {pokemon && pokemon.classification}
           </span>
           <span className=" text-[white]">
-           Minimum weight: {pokemon && pokemon.weight.minimum}
+            Minimum weight: {pokemon && pokemon.weight.minimum}
           </span>
           <span className=" text-[white]">
-           Maximum weight: {pokemon && pokemon.weight.maximum}
+            Maximum weight: {pokemon && pokemon.weight.maximum}
           </span>
           <span className=" text-[white]">
-           Minimum weight: {pokemon && pokemon.height.minimum}
+            Minimum weight: {pokemon && pokemon.height.minimum}
           </span>
           <span className=" text-[white]">
-           Minimum weight: {pokemon && pokemon.height.maximum}
+            Minimum weight: {pokemon && pokemon.height.maximum}
           </span>
         </div>
       )}

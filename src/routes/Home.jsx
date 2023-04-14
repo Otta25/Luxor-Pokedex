@@ -8,12 +8,11 @@ import PokemonCard from "../components/PokemonCard";
 import Pagination from "../components/Pagination";
 import PokemonDetails from "../components/PokemonDetails";
 
-
 function Home() {
   const [page, setPage] = useState(1);
   const GET_POKEMONS = gql`
   {
-    pokemons(first: ${page*7}) {
+    pokemons(first: ${page * 7}) {
       id
       number
       name
@@ -34,23 +33,20 @@ function Home() {
   const [pokemonPerPage, setPokemonPerPage] = useState(7);
   const dataLength = data && data.pokemons.length;
   const pokemonsData = useSelector((state) => state);
-  const [dataIsOver,setDataIsOver]=useState(false)
-  const query = useQuery(GET_POKEMONS)
- 
-  
-useEffect(()=>{
-  if(previousData){
-    if(data){
-       if(data.pokemons.length === previousData.pokemons.length){
-        setDataIsOver(true)
-       } else{
-        setDataIsOver(false)
-       }
-    }
-  }
-},[data,previousData])
+  const [dataIsOver, setDataIsOver] = useState(false);
+  const query = useQuery(GET_POKEMONS);
 
- 
+  useEffect(() => {
+    if (previousData) {
+      if (data) {
+        if (data.pokemons.length === previousData.pokemons.length) {
+          setDataIsOver(true);
+        } else {
+          setDataIsOver(false);
+        }
+      }
+    }
+  }, [data, previousData]);
 
   if (data) {
     if (pokemonsData.pokemons) {
@@ -94,11 +90,10 @@ useEffect(()=>{
               dataLength={dataLength}
               data={data}
               dataIsOver={dataIsOver}
-  
             />
           </div>
           <div className="bg-[#3B3E46] w-full ">
-            <PokemonDetails/>
+            <PokemonDetails />
           </div>
         </div>
       </div>

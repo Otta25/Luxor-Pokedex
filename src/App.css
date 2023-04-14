@@ -1,11 +1,36 @@
-
 .pokeball {
   width: 7rem;
   animation: pokeball-spinner 1.5s infinite ease-in-out;
 }
 
-html{
+html {
   scroll-behavior: smooth;
+}
+
+.pokemoncard {
+  transition: ease-in-out 0.4s;
+}
+
+.pokemoncard:hover {
+  transform: rotate(-5deg);
+  scale: 1.1;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.276);
+  background: linear-gradient(
+    135deg,
+    rgba(24, 24, 24, 1) 28%,
+    rgb(64, 64, 64) 49%,
+    rgba(32, 32, 32, 1) 69%
+  );
+  opacity: 0.9;
+}
+@media (max-width: 600px) {
+  .pokemoncard:hover {
+    transform: none;
+    scale: none;
+    box-shadow: none;
+    background: none;
+    opacity: none;
+  }
 }
 
 @keyframes pokeball-spinner {
