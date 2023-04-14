@@ -18,7 +18,7 @@ function PokemonCard({ name, image, number, id ,mapIndex,classification,weight,h
   return (
     <motion.div
       onClick={handleClick}
-      className="bg-[#3F414B] min-w-[90%] flex my-2 items-center cursor-pointer hover:bg-[#545663] transition-all ease-in-out"
+      className="bg-[#3F414B] min-w-[90%] flex my-2 items-center cursor-pointer font-semibold rounded-md hover:bg-[#545663] transition-all ease-in-out"
       key={id}
       variants={{
         hidden:{
