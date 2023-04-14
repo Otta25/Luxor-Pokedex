@@ -23,6 +23,16 @@ html {
   );
   opacity: 0.9;
 }
+
+.pikachuGif{
+  position: absolute;
+  top: 60vh;
+  left: -5vw;
+  animation: pikachu 10s infinite ease-in;
+
+  
+}
+
 @media (max-width: 600px) {
   .pokemoncard:hover {
     transform: none;
@@ -39,5 +49,16 @@ html {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes pikachu{
+  0% {
+    top: 60vh;
+    left: -5vw;
+  }
+  100% {
+    top: 60vh;
+    left: 95vw;
   }
 }
